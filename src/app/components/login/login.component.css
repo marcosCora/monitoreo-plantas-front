@@ -1,0 +1,126 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.container-left {
+    background-image: linear-gradient(to bottom, #33A3AA 100%, #107076 100%), url(../../../assets/icons/fondo-login.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    width: 796px;
+    height: 100vh;
+    opacity: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 361px;
+    height: 58px;
+    top: 319px;
+    left: 128px;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.p-information {
+    width: 360px;
+    height: 72px;
+    top: 387px;
+    left: 128px;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.article-information {
+    padding-left: 5vh;
+    color: #FFFFFF;
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding-top: 2vh;
+    margin-bottom: 2vh;
+    white-space: nowrap;
+    width: 411px;
+    height: 41px;
+    top: 479px;
+    left: 128px;
+
+}
+
+.article-information .icon.shape {
+    width: 24px;
+    height: 24px;
+    top: 479px;
+    left: 128px;
+}
+
+.article-information .icon.icon {
+    width: 20px;
+    height: 20px;
+    top: 542px;
+    left: 130px;
+}
+
+
+.article-information .title-monitoreo {
+    width: 130px;
+    height: 21px;
+    top: 479px;
+    left: 164px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+}
+
+.article-information .info-monitoreo {
+    width: 375px;
+    height: 17px;
+    top: 503px;
+    left: 164px;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+
+}
+
+.article-information .title-notifiacion{
+    width: 207px;
+    height: 21px;
+    top: 540px;
+    left: 164px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+
+}
+
+.article-information .info-notificacion {
+    width: 346px;
+    height: 17px;
+    top: 564px;
+    left: 164px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+
+}
