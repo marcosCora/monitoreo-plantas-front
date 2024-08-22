@@ -1,0 +1,8 @@
+.dashboard{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    top: -450px;
+    left: 820px;
+    background: #E9F1F4;
+}

@@ -1,0 +1,65 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 100vh;
+    left: 80px;
+    box-shadow: 3px 0px 5px 0px #0000001A;
+    background: #FFFFFF;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10%;
+} 
+
+.logo{
+    width: 36px;
+    height: 32.61px;
+    margin-top: 20px;
+}
+
+.navegation{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 24px;
+    height: 257.97px;
+}
+
+.dasboard{
+    width: 20px;
+    height: 20px;
+    top: 130px;
+    left: 30px;
+    color: #0000;
+
+}
+.monitoreo-inactive{
+    width: 24px;
+    height: 15px;
+    top: 192px;
+    left: 28px;
+    color: #0000;
+
+}
+.historico-sensors{
+    width: 22px;
+    height: 16.97px;
+    top: 249px;
+    left: 29px;
+    color: #0000;
+
+}
+.historico-plants{
+    width: 20px;
+    height: 20px;
+    top: 307.97px;
+    left: 30px;
+    color: #0000;
+}
+.logout{
+    width: 17.79px;
+    height: 18px;
+    top: 369.97px;
+    left: 31px;
+    color: #0000;
+}

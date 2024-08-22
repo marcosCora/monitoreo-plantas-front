@@ -54,44 +54,35 @@
     white-space: nowrap;
     width: 411px;
     height: 41px;
-    top: 479px;
-    left: 128px;
+/*     top: 479px;
+    left: 128px; */
 
 }
+
 
 .article-information .icon.shape {
     width: 24px;
     height: 24px;
-    top: 479px;
-    left: 128px;
 }
 
 .article-information .icon.icon {
     width: 20px;
     height: 20px;
-    top: 542px;
-    left: 130px;
 }
 
 
-.article-information .title-monitoreo {
+.article-information .container-titulos .title-monitoreo {
     width: 130px;
     height: 21px;
-    top: 479px;
-    left: 164px;
-    font-family: Poppins;
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
     text-align: left;
 }
 
-.article-information .info-monitoreo {
+.article-information .container-titulos .info-monitoreo {
     width: 375px;
     height: 17px;
-    top: 503px;
-    left: 164px;
-    font-family: Poppins;
     font-size: 12px;
     font-weight: 400;
     line-height: 17px;
@@ -99,13 +90,9 @@
 
 }
 
-.article-information .title-notifiacion{
+.article-information .container-titulos .title-notifiacion{
     width: 207px;
     height: 21px;
-    top: 540px;
-    left: 164px;
-    gap: 0px;
-    opacity: 0px;
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
@@ -113,11 +100,9 @@
 
 }
 
-.article-information .info-notificacion {
+.article-information .container-titulos .info-notificacion {
     width: 346px;
     height: 17px;
-    top: 564px;
-    left: 164px;
     font-size: 12px;
     font-weight: 400;
     line-height: 17px;
@@ -213,9 +198,12 @@
     border: 1px 0px 0px 0px;
     border-radius: 10px;
 
-    color: black;
+    color: #FFFFFF;
     border: 1px solid #DCDBDD
+}
 
+.submit :hover{
+    background-color: #1fc0cb;
 }
 
 .politica{
