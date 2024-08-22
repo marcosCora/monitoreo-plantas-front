@@ -9,6 +9,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { GlobalReadingsComponent } from './components/global-readings/global-readings.component';
 import { BoardComponent } from './components/board/board.component';
 import { IndicatorsComponent } from './components/indicators/indicators.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IndicatorsComponent } from './components/indicators/indicators.componen
     SidebarComponent,
     GlobalReadingsComponent,
     BoardComponent,
-    IndicatorsComponent
+    IndicatorsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
