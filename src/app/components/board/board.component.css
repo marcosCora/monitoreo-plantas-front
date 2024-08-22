@@ -1,0 +1,80 @@
+.container-board{
+    display: flex;
+    flex-direction: column;
+    width: 1262px;
+    height: 350px;
+    border-radius: 15px;
+    opacity: 0px;
+    background: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    overflow-y: auto;
+}
+
+.container-board .titles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-left: 25px;
+}
+
+.container-board .titles h3{
+    width: 62px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #000000;
+}
+
+.container-board .titles button{
+    width: 170px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px;
+    opacity: 0px;
+    border: 1px solid #B0CAD1;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 18px;
+    text-align: left;
+    color: #000000;
+    cursor:pointer;
+}
+
+.line{
+    width: 1222px;
+    height: 0px;
+    border: 1px;
+    border: 1px solid #F3F6F7;
+}
+
+.table{
+    font-family: "Poppins", sans-serif;
+}
+
+.table .table-head{
+    width: 30vh;
+    height: 21px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    color: #B0CAD1;
+}
+
+.table .table-body{
+    width: 1164.7px;
+    height: 20px;
+    color: #000000;
+    
+}
+
+.table .table-body th{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    
+}

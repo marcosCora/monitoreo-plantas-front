@@ -6,12 +6,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     margin-left: 15px;
 }
 
 .container h1{
-    width: 257px;
+    width: 280px;
     height: 45px;
     top: 50px;
     left: 110px;

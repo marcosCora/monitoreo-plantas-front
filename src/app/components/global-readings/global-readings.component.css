@@ -1,0 +1,71 @@
+.container-readings{
+    display: flex;
+    flex-direction: row;
+    width: Fixed (1,262px)px;
+    height: Hug (110px)px;
+    gap: 34px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 25px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    width: 290px;
+    height: 110px;
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 15px 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+ .cards .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    width: 80%;
+    height: 48px;
+    margin-left: 2vh;
+    display: flex;
+    flex-direction: column;
+} 
+
+.cards .text .title{
+    height: 18px;
+    top: 31px;
+    left: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8E8EA1;
+
+}
+
+
+.cards .text .number{
+ 
+    width: 61.04px;
+    height: 30px;
+    top: 49px;
+    left: 18.23px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    margin-top: 0px;
+    color: #22242C;
+
+}
+.cards img{
+    width: 60px;
+    height: 60px;
+    top: 25px;
+    left: 210px;
+    margin-right: 14px;
+}

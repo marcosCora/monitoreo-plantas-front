@@ -5,4 +5,13 @@
     top: -450px;
     left: 820px;
     background: #E9F1F4;
+    font-family: "Poppins", sans-serif;
+}
+
+.dashboard .global{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
 }
