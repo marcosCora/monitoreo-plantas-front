@@ -2,7 +2,6 @@
     width: 100%;
     height: 900px;
     opacity: 0.3px;
-
 }
 
 .section-modal{
@@ -17,16 +16,14 @@
         justify-content: center;
         padding-left: 3vh;
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
 }
 
-.section-modal .title{
+.section-modal .title h2{
     width: 138px;
     height: 21px;
-    top: 325px;
-    left: 560px;
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
@@ -37,20 +34,82 @@
 .form-plant{
     width: 320px;
     height: 68px;
-    top: 366px;
-    left: 560px;
-    border-radius: 7.43px;
-    border: 0.93px;
+}
+
+.div-continer-form{
+    position: relative;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    gap: 1rem;
+}
+.div-continer-form input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #DCDBDD;
+    border-radius: 8px;
+    outline: none;
 }
 
-.form-plant p {
+.div-continer-form .name-plant{
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 14px;
+    width: 108px;
+    height: 21px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    color: #838B9E;
+}
+
+.div-continer-form .pais{
     width: 320px;
-    height: 68px;
-    border-radius: 7.43px;
+    height: 42px;
+    top: 392px;
+    left: 560px;
+    gap: 0px;
+    border-radius: 7.43px ;
     border: 0.93px;
     border: 0.93px solid #C6C9D2
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+}
+
+
+
+.buttons .cancelar{
+    width: 100px;
+    height: 36px;
+    border-radius: 5px;
+    width: 100px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px;
+    border: 1px solid #33A3AA;
+    color: #33A3AA;
+    cursor: pointer;
 
 }
+
+.buttons .crear{
+    width: 100px;
+    height: 36px;
+    border-radius: 5px;
+    width: 100px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px;
+    background: #33A3AA;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+

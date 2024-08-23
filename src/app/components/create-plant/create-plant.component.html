@@ -1,27 +1,27 @@
 <div class="backround"></div>
 
-<!-- <section class="modal"> -->
-
-
-
 <section class="section-modal">
-    <h2 class="title">Crear nueva planta</h2>
-        <form class="form-plant">
-            <p>Nombre planta</p>
-            <input type="text" name="" id="">
+    <article class="title">
+        <h2>Crear nueva planta</h2>
+    </article>
+    <form class="form-plant">
+        <div class="div-continer-form">
+            <label class="name-plant">Nombre planta</label>
+            <input type="text" class="" id="" name="email" placeholder="Techborb"/>
 
-            <p>Pais</p>
-            <select name="" id="">
-                <option value="">Argentina</option>
-                <option value="">Argentina</option>
-                <option value="">Argentina</option>
-            </select>
-
-            <div>
-                <button type="submit">Cancelas</button>
-                <button type="submit">Crear</button>
+            <div class="pais">
+                <label for="">Pais</label>
+                <select name="" id="">
+                    <option value="">Argentina</option>
+                    <option value="">Argentina</option>
+                    <option value="">Argentina</option>
+                </select>
             </div>
-        </form>
+        </div>
+        <div class="buttons">
+            <button class="cancelar">Cancelar</button>
+            <button [routerLink]="['/dashboard']" type="submit" class="crear">Crear</button>
+        </div>
+    </form>
 </section>
 
-<!-- </section> -->

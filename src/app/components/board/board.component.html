@@ -2,7 +2,7 @@
 
     <div class="titles">
         <h3>Plantas</h3>
-        <button>+ Crear nueva planta</button>
+        <button (click)="createPlantState(true)">+ Crear nueva planta</button>
     </div>
 
     <hr class="line">
@@ -24,64 +24,9 @@
             <th>2</th>
             <th>boton</th>
         </tbody>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
-        </tbody>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
-        </tbody>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
-        </tbody>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
-        </tbody>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
-        </tbody>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
-        </tbody>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
-        </tbody>
     </table>
-
-
 </section>
 
+<div *ngIf="createPlant" class="backround" >
+        <app-create-plant (event)="createPlant"></app-create-plant>
+</div>

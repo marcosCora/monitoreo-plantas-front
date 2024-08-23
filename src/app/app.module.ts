@@ -11,6 +11,8 @@ import { BoardComponent } from './components/board/board.component';
 import { IndicatorsComponent } from './components/indicators/indicators.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreatePlantComponent } from './components/create-plant/create-plant.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { CreatePlantComponent } from './components/create-plant/create-plant.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
