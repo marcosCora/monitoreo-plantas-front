@@ -1,19 +1,19 @@
+import { Reading } from "./reading";
+
 export class Plant {
     idPlant : number;
     name : string;
     country : string;
-    cantReadings : number;
-    cantAlertMedium :  number;
-    cantAlertRed : number;
+    urlFlag : string;
+    readings : Reading[];
     sensorsDisiabled : number;
 
     constructor() {
         this.idPlant = 0;
         this.name = "";
         this.country = "";
-        this.cantReadings = 0;
-        this.cantAlertMedium = 0;
-        this.cantAlertRed = 0;
+        this.urlFlag = "";
+        this.readings = [];
         this.sensorsDisiabled = 0;
     }
 

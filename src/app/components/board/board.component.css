@@ -14,8 +14,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    
     gap: 20px;
     margin-left: 25px;
+}
+
+.container-board .container-titles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .container-board .titles h3{
@@ -28,7 +39,7 @@
     color: #000000;
 }
 
-.container-board .titles button{
+.container-board .titles .button-plants{
     width: 170px;
     height: 28px;
     border-radius: 5px;
@@ -41,6 +52,22 @@
     text-align: left;
     color: #000000;
     cursor:pointer;
+}
+
+.button-plants{
+    width: 100px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px;
+    opacity: 0px;
+    border: 1px solid #B0CAD1;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+    cursor:pointer;
+    margin: 5px;
 }
 
 .line{
@@ -71,12 +98,62 @@
     
 }
 
-.table .table-body th{
+.table .table-body tr{
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     text-align: center;
 }
+
+.table .table-body .flag{
+    width: 18px;
+    height: 12.38px;
+    top: 371px;
+    left: 130px;
+    margin-right: 5px;
+    
+}
+
+.table .table-body button{
+    width: 12.05px;
+    height: 2.7px;
+    top: 370.53px;
+    left: 1294.7px;
+    background-color: #FFFFFF;
+    
+}
+.table .table-body button img{
+    width: 12.05px;
+    height: 2.7px;
+    top: 370.53px;
+    left: 1294.7px;
+    background-color: #FFFFFF;
+    
+}
+.table .table-body .menu{
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+    margin-left: 2vh;
+    position: absolute;
+    top: 80px;
+}
+
+.table .table-body .menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .table .table-body .menu ul li{
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  .table .table-body .menu ul li :hover{
+    background-color: #ccc;
+  }
 
 .backround{
     position: fixed;

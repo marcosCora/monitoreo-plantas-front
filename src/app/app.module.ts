@@ -12,7 +12,8 @@ import { IndicatorsComponent } from './components/indicators/indicators.componen
 import { HeaderComponent } from './components/header/header.component';
 import { CreatePlantComponent } from './components/create-plant/create-plant.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

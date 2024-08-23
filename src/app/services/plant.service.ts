@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Plant } from '../entity/plant';
+import { PlantBoard } from '../entity/plant-board';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,14 @@ import { Plant } from '../entity/plant';
 export class PlantService {
 
   constructor(private http : HttpClient) { }
-  URL : string = 'http://localhost:8080/techapi/plants'
+  url : string = 'http://localhost:8080/techapi/plants'
 
-  getPlants() : Observable<Plant[]>{
-    return this.http.get<Plant[]>(`${this.URL}/getall`);
+  getPlantsBoard() : Observable<PlantBoard[]>{
+    return this.http.get<PlantBoard[]>(`${this.url}/getall`);
+  }
+
+  postPlant(p : Plant) : Observable<Plant>{
+    return this.http.post<Plant>(`${this.url}/creat`, p);
   }
 
 

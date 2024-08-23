@@ -1,32 +1,45 @@
 <section class="container-board">
-
+<div class="container-titles">
     <div class="titles">
         <h3>Plantas</h3>
-        <button (click)="createPlantState(true)">+ Crear nueva planta</button>
+        <button class="button-plants" (click)="createPlantState(true)">+ Crear nueva planta</button>
     </div>
-
+    <div *ngIf="optionPlant == true">
+        <button class="button-plants" >Modificar</button>
+        <button class="button-plants" >Eliminar</button>
+    </div>
+</div>
     <hr class="line">
 
     <table class="table">
         <thead class="table-head">
-            <th>Pais</th>
-            <th>Nombre de la planta</th>
-            <th>Lecturas</th>
-            <th>Alertas medias</th>
-            <th>Alertas rojas</th>
-            <th>Acciones</th>
+            <tr>
+                <th>Pais</th>
+                <th>Nombre de la planta</th>
+                <th>Lecturas</th>
+                <th>Alertas medias</th>
+                <th>Alertas rojas</th>
+                <th>Acciones</th>
+            </tr>
         </thead>
-        <tbody class="table-body">
-            <th>Argentina</th>
-            <th>Quilmes</th>
-            <th>300</th>
-            <th>10</th>
-            <th>2</th>
-            <th>boton</th>
+        <tbody  class="table-body">
+            <tr *ngFor="let p of plantBoard">
+                <td><img src={{p.urlCountry}} class="flag">{{p.nameCountry}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.cantReadings}}</td>
+                <td>{{p.cantAlertMedium}}</td>
+                <td>{{p.cantAlertRed}}</td>
+                <td>
+                    <div class="img" (click)="optionsPlant()">
+                        <img src="../../../assets/icons/Vector.png"  alt="opciones" class="puntos">
+                    </div> 
+                </td>
+
+            </tr>
         </tbody>
     </table>
 </section>
 
-<div *ngIf="createPlant" class="backround" >
-        <app-create-plant (event)="createPlant"></app-create-plant>
+<div *ngIf="createPlant" class="backround">
+    <app-create-plant (event)="createPlantState($event)"></app-create-plant>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Plant } from 'src/app/entity/plant';
+import { PlantBoard } from 'src/app/entity/plant-board';
 import { PlantService } from 'src/app/services/plant.service';
 
 @Component({
@@ -12,13 +13,13 @@ export class BoardComponent implements OnInit{
   constructor(private servicePlant : PlantService){}
 
   createPlant : boolean = false;
-  plants : Plant[] = [];
+  optionPlant : boolean = false;
+  plantBoard : PlantBoard[] = [];
 
   ngOnInit(): void {
-    this.servicePlant.getPlants().subscribe((response)=>{
-      this.plants = response;
-      console.log(response);
-      
+    this.servicePlant.getPlantsBoard().subscribe((response)=>{
+      this.plantBoard = response;
+      console.log(this.plantBoard);
     }, 
     (error) =>{
       console.log(error);
@@ -28,6 +29,14 @@ export class BoardComponent implements OnInit{
 
   createPlantState(state : boolean){
     this.createPlant = state;
+  }
+
+  optionsPlant(){
+    if(this.optionPlant == false){
+      this.optionPlant = true;
+    }else{
+      this.optionPlant = false;
+    }
   }
 
 }

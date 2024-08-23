@@ -4,23 +4,21 @@
     <article class="title">
         <h2>Crear nueva planta</h2>
     </article>
-    <form class="form-plant">
+    <form [formGroup]="formCreatePlant" (submit)="addPlant()" class="form-plant"> 
         <div class="div-continer-form">
             <label class="name-plant">Nombre planta</label>
-            <input type="text" class="" id="" name="email" placeholder="Techborb"/>
+            <input formControlName="name" type="text" class="" id="" name="email" placeholder="Techborb"/>
 
             <div class="pais">
                 <label for="">Pais</label>
-                <select name="" id="">
-                    <option value="">Argentina</option>
-                    <option value="">Argentina</option>
-                    <option value="">Argentina</option>
+                <select name="" id="" formControlName="indexCountry">
+                    <option *ngFor="let c of countries; let i = index" [value]="i">{{c.name}}</option>
                 </select>
             </div>
         </div>
         <div class="buttons">
-            <button class="cancelar">Cancelar</button>
-            <button [routerLink]="['/dashboard']" type="submit" class="crear">Crear</button>
+            <button class="cancelar" (click)="cancelCreatePlant()" >Cancelar</button>
+            <button  type="submit" class="crear">Crear</button>
         </div>
     </form>
 </section>
