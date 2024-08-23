@@ -1,0 +1,56 @@
+.backround{
+    width: 100%;
+    height: 900px;
+    opacity: 0.3px;
+
+}
+
+.section-modal{
+        font-family: "Poppins", sans-serif;
+        z-index: 1000;
+        width: 380px;
+        height: 290px;
+        border-radius: 15px;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 3vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+.section-modal .title{
+    width: 138px;
+    height: 21px;
+    top: 325px;
+    left: 560px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    color: #000000;
+}
+
+.form-plant{
+    width: 320px;
+    height: 68px;
+    top: 366px;
+    left: 560px;
+    border-radius: 7.43px;
+    border: 0.93px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-plant p {
+    width: 320px;
+    height: 68px;
+    border-radius: 7.43px;
+    border: 0.93px;
+    border: 0.93px solid #C6C9D2
+
+}

@@ -10,6 +10,7 @@ import { GlobalReadingsComponent } from './components/global-readings/global-rea
 import { BoardComponent } from './components/board/board.component';
 import { IndicatorsComponent } from './components/indicators/indicators.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CreatePlantComponent } from './components/create-plant/create-plant.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
     GlobalReadingsComponent,
     BoardComponent,
     IndicatorsComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreatePlantComponent
   ],
   imports: [
     BrowserModule,
