@@ -19,7 +19,4 @@ export class PlantService {
   postPlant(p : Plant) : Observable<Plant>{
     return this.http.post<Plant>(`${this.url}/creat`, p);
   }
-
-
-
 }

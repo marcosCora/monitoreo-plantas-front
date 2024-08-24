@@ -1,0 +1,86 @@
+<section class="backround"></section>
+<section class="container">
+    <h4 class="title">Editar planta</h4>
+    <form [formGroup]="formModify" (submit)="modifyPlantFun()">
+        <div class="form">
+            <div class="container-form">
+                <div class="div-left">
+                    <section class="section">
+                        <label for="nombre">Nombre planta</label>
+                        <input type="text" class="nombre" formControlName="name">
+                        <!--     @if(edicion.get("nombre")?.errors?.["required"]  &&  edicion.get("nombre")?.dirty){
+                        <p>El nombre es requerido</p>
+                        } -->
+                    </section>
+
+                    <section class="section">
+                        <label for="lecturas">Cantidad de lecturas</label>
+                        <input type="number" class="lecturas" formControlName="cantReadings">
+                        <!--      @if(edicion.get("cantidadLecturas")?.errors?.["required"]  &&  edicion.get("cantidadLecturas")?.dirty){
+                        <p>La cantidad de lecturas es requerida</p>
+                        } -->
+                    </section>
+
+                    <section class="section">
+                        <label for="medias">Alertas medias</label>
+                        <input type="number" class="medias" formControlName="cantAlertMedium">
+                        <!--   @if(edicion.get("cantidadMedia")?.errors?.["required"]  &&  edicion.get("cantidadMedia")?.dirty){
+                        <p>La cantidad de lecturas medias es requerida</p>
+                        } -->
+                    </section>
+
+                    <section class="section">
+                        <label for="roja">Sensores deshabilitados</label>
+                        <input type="number" class="roja" formControlName="sensorsDisiabled">
+                        <!--        @if(edicion.get("cantidadRoja")?.errors?.["required"]  &&  edicion.get("cantidadRoja")?.dirty){
+                <p>La cantidad de alertas rojas son requerida</p>
+            } -->
+                    </section>
+
+                </div>
+
+                <div class="div-right">
+                    <section class="section">
+                        <label for="pais">País</label>
+                        <!--      <select class="pais" id="pais" name="pais" formControlName="country">
+                                  @for(pais of paises;track pais; let index = $index){
+                        <option [value]="pais.getNombre">{{pais.getNombre}}</option>
+                   }  
+                        </select> -->
+                        <select class="pais" id="pais" name="pais" formControlName="country">
+                            <option *ngFor="let c of countries">{{c.name}}</option>
+                        </select>
+                    </section>
+
+
+                    <section class="section">
+                        <label for="ok">Lecturas ok</label>
+                        <input type="number" class="ok" formControlName="readingsOk">
+                        <!--   @if(edicion.get("cantidadOk")?.errors?.["required"]  &&  edicion.get("cantidadOk")?.dirty){
+                    <p>La cantidad de lecturas ok es requerida</p>
+                } -->
+                    </section>
+
+                    <section class="section">
+                        <label for="roja">Alertas rojas</label>
+                        <input type="number" class="roja" formControlName="cantAlertRed">
+                        <!--        @if(edicion.get("cantidadRoja")?.errors?.["required"]  &&  edicion.get("cantidadRoja")?.dirty){
+                    <p>La cantidad de alertas rojas son requerida</p>
+                } -->
+                    </section>
+                    <div class="buttons">
+                        <button class="cancel" (click)="cancelModify()">Cancelar</button>
+                        <input type="submit" class="creat">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </form>
+    <!--    @if(validos){
+        <p>La suma de las lecturas tiene que ser igual a la lectura total</p>
+
+    } -->
+</section>

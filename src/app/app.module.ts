@@ -14,6 +14,7 @@ import { CreatePlantComponent } from './components/create-plant/create-plant.com
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModifyPlantComponent } from './components/modify-plant/modify-plant.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BoardComponent,
     IndicatorsComponent,
     HeaderComponent,
-    CreatePlantComponent
+    CreatePlantComponent,
+    ModifyPlantComponent
   ],
   imports: [
     BrowserModule,

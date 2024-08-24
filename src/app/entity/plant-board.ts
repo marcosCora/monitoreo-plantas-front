@@ -1,8 +1,8 @@
 export class PlantBoard {
     idPlant : number;
     name : string;
-    nameCountry : string;
-    urlCountry : string
+    country : string;
+    urlFlag : string;
     cantReadings : number;
     cantAlertMedium :  number;
     cantAlertRed : number;
@@ -11,8 +11,8 @@ export class PlantBoard {
     constructor() {
         this.idPlant = 0;
         this.name = "";
-        this.nameCountry = "";
-        this.urlCountry = "";
+        this.country = "";
+        this.urlFlag = "";
         this.cantReadings = 0;
         this.cantAlertMedium = 0;
         this.cantAlertRed = 0;

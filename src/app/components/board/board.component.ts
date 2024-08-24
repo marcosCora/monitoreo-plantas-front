@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { map } from 'rxjs';
 import { Plant } from 'src/app/entity/plant';
 import { PlantBoard } from 'src/app/entity/plant-board';
 import { PlantService } from 'src/app/services/plant.service';
@@ -14,7 +15,9 @@ export class BoardComponent implements OnInit{
 
   createPlant : boolean = false;
   optionPlant : boolean = false;
+  modifyPlant : boolean = false;
   plantBoard : PlantBoard[] = [];
+  plantSelected : Plant = new Plant();
 
   ngOnInit(): void {
     this.servicePlant.getPlantsBoard().subscribe((response)=>{
@@ -31,12 +34,25 @@ export class BoardComponent implements OnInit{
     this.createPlant = state;
   }
 
-  optionsPlant(){
+  optionsPlant(plant : PlantBoard){
+
+    this.mapPlant(plant);
     if(this.optionPlant == false){
       this.optionPlant = true;
     }else{
       this.optionPlant = false;
     }
+  }
+
+  mapPlant(plantBoard : PlantBoard){
+    this.plantSelected.idPlant = plantBoard.idPlant;
+    this.plantSelected.name = plantBoard.name;
+    this.plantSelected.country = plantBoard.country;
+    this.plantSelected.urlFlag = plantBoard.urlFlag;
+  }
+
+  modifyPlantFun(state : boolean){
+    this.modifyPlant = state;
   }
 
 }

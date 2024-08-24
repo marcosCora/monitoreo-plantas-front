@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Country } from 'src/app/entity/country';
 import { Plant } from 'src/app/entity/plant';
 import { CountrysService } from 'src/app/services/countrys.service';
@@ -12,7 +13,9 @@ import { PlantService } from 'src/app/services/plant.service';
 })
 export class CreatePlantComponent implements OnInit{
 
-  constructor(private serviceCountries : CountrysService, private servicePlant : PlantService){}
+  constructor(private serviceCountries : CountrysService, 
+              private servicePlant : PlantService,
+              private router : Router){}
 
   @Input() cratePlantState: boolean = true;
   @Output() event = new EventEmitter<boolean>();
@@ -45,9 +48,12 @@ export class CreatePlantComponent implements OnInit{
       plant.country = this.countries[indexCountry].name
       plant.urlFlag = this.countries[indexCountry].urlFlag;
       console.log(plant);
-      this.cancelCreatePlant();
+      
       this.servicePlant.postPlant(plant).subscribe((response)=>{
         console.log(response);
+        this.cancelCreatePlant();
+        this.router.navigate(['/dashboard']);
+        
       },
       (error)=>{
       console.log(error);
@@ -57,8 +63,6 @@ export class CreatePlantComponent implements OnInit{
       
     }
   }
-
-
 
   cancelCreatePlant(){
     this.event.emit(false);
