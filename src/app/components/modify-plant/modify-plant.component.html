@@ -1,7 +1,7 @@
 <section class="backround"></section>
 <section class="container">
     <h4 class="title">Editar planta</h4>
-    <form [formGroup]="formModify" (submit)="modifyPlantFun()">
+    <form [formGroup]="formModify" >
         <div class="form">
             <div class="container-form">
                 <div class="div-left">
@@ -47,8 +47,8 @@
                         <option [value]="pais.getNombre">{{pais.getNombre}}</option>
                    }  
                         </select> -->
-                        <select class="pais" id="pais" name="pais" formControlName="country">
-                            <option *ngFor="let c of countries">{{c.name}}</option>
+                        <select class="pais" id="pais" name="pais" formControlName="indexCountry">
+                            <option *ngFor="let c of countries; let i = index" [value]="i">{{c.name}}</option>
                         </select>
                     </section>
 
@@ -70,7 +70,7 @@
                     </section>
                     <div class="buttons">
                         <button class="cancel" (click)="cancelModify()">Cancelar</button>
-                        <input type="submit" class="creat">
+                        <input type="submit" (click)="modifyPlantFun()" class="creat">
                     </div>
                 </div>
 

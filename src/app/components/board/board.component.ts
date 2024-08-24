@@ -17,12 +17,13 @@ export class BoardComponent implements OnInit{
   optionPlant : boolean = false;
   modifyPlant : boolean = false;
   plantBoard : PlantBoard[] = [];
-  plantSelected : Plant = new Plant();
+  plantSelected : PlantBoard = new PlantBoard();
 
   ngOnInit(): void {
     this.servicePlant.getPlantsBoard().subscribe((response)=>{
       this.plantBoard = response;
       console.log(this.plantBoard);
+      
     }, 
     (error) =>{
       console.log(error);

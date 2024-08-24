@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Country } from 'src/app/entity/country';
 import { Plant } from 'src/app/entity/plant';
+import { PlantBoard } from 'src/app/entity/plant-board';
 import { CountrysService } from 'src/app/services/countrys.service';
 import { PlantService } from 'src/app/services/plant.service';
 
@@ -43,7 +44,7 @@ export class CreatePlantComponent implements OnInit{
   addPlant(){
     if(!this.formCreatePlant.invalid){
       let indexCountry = this.formCreatePlant.controls['indexCountry'].value;
-      let plant : Plant = new Plant();
+      let plant : PlantBoard = new PlantBoard();
       plant.name = this.formCreatePlant.controls['name'].value;
       plant.country = this.countries[indexCountry].name
       plant.urlFlag = this.countries[indexCountry].urlFlag;

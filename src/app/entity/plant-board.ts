@@ -3,6 +3,7 @@ export class PlantBoard {
     name : string;
     country : string;
     urlFlag : string;
+    cantReadingOk : number;
     cantReadings : number;
     cantAlertMedium :  number;
     cantAlertRed : number;
@@ -14,6 +15,7 @@ export class PlantBoard {
         this.country = "";
         this.urlFlag = "";
         this.cantReadings = 0;
+        this.cantReadingOk = 0;
         this.cantAlertMedium = 0;
         this.cantAlertRed = 0;
         this.sensorsDisiabled = 0;
