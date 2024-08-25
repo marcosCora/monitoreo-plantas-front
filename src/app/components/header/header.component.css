@@ -1,5 +1,5 @@
-.container{
-    width: 78.875rem;
+.container {
+    width: 94%;
     height: 45px;
     margin-top: 15px;
     display: flex;
@@ -24,6 +24,12 @@
 
 }
 
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 6rem;
+}
+
 .nav{
     width: 300px;
     height: 27px;
@@ -40,7 +46,6 @@
  }
 
  .nav label{
-    /*width: 101px;*/
     height: 27px;
     font-size: 18px;
     font-weight: 600;

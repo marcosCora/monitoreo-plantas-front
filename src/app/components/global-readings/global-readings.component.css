@@ -1,17 +1,17 @@
 .container-readings{
     display: flex;
     flex-direction: row;
-    width: Fixed (1,262px)px;
-    height: Hug (110px)px;
+    width: 95%;
     gap: 34px;
     font-family: "Poppins", sans-serif;
     margin-top: 25px;
+    justify-content: space-between;
 }
 
 .cards{
     display: flex;
     flex-direction: row;
-    width: 290px;
+    width: 25%;
     height: 110px;
     background-color: #FFFFFF;
     border-radius: 15px 15px 15px 15px;

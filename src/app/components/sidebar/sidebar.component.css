@@ -9,6 +9,9 @@
     justify-content: flex-start;
     align-items: center;
     gap: 10%;
+    box-shadow: -14px 0px 14px 8px #000;
+    z-index: 99;
+    position: sticky;
 } 
 
 .logo{

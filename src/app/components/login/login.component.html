@@ -30,8 +30,11 @@
         </div>
       </div>
     </section>
+      
     <section class="container-right">
-      <article class="article-titles">
+
+    <div *ngIf="viewFormLogin">
+       <article class="article-titles">
         <h2>Portal de Monitoreo</h2>
         <p>Iniciar Sesiòn</p>
       </article>
@@ -93,7 +96,8 @@
             value="Iniciar sesión"
           />
         </div>
-      </form>
+      </form> 
+      
   
       <p class="politica">
         Protegido por reCAPTCHA y sujeto a la
@@ -102,7 +106,14 @@
         >
         <br />
         ¿Aun no tiene una cuenta?
-        <a class="strong">Registrarse</a>
-      </p>
-    </section>
+        <a class="strong" (click)="updateStateView()">Registrarse</a>
+      </p> 
+    </div>
+
+    <app-register *ngIf="!viewFormLogin"></app-register>
+      
+    </section>  
+    
+    
+    
   </section>

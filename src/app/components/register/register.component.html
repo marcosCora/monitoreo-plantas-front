@@ -1,0 +1,82 @@
+
+    <article class="article-titles">
+      <h2>Portal de Monitoreo</h2>
+      <p>Registro</p>
+    </article>
+<form class="form" [formGroup]="formRegister" (submit)="register()">
+    <div class="div-continer-form">
+        <input formControlName="name" type="text" class="email" id="email" name="email" placeholder="Nombre" />
+        
+        <div class="errorMsg isTop" *ngIf="
+            formRegister.get('name')?.invalid &&
+            (formRegister.get('name')?.touched || formRegister.get('name')?.dirty)
+          ">
+            <div *ngIf="formRegister.get('name')?.errors?.['required']">
+                Campo Obligatorio
+            </div>
+            <div *ngIf="formRegister.get('name')?.errors?.['pattern']">
+                Correo Invalido
+            </div>
+        </div>
+
+        
+        <input formControlName="lastName" type="text" class="email" id="email" name="email" placeholder="Apellido" />
+        <div class="errorMsg isTop" *ngIf="
+          formRegister.get('lastName')?.invalid &&
+          (formRegister.get('emalastNameil')?.touched || formRegister.get('lastName')?.dirty)
+        ">
+            <div *ngIf="formRegister.get('lastName')?.errors?.['required']">
+                Campo Obligatorio
+            </div>
+            <div *ngIf="formRegister.get('lastName')?.errors?.['pattern']">
+                Correo Invalido
+            </div>
+        </div>
+
+
+        
+        <input formControlName="email" type="email" class="email" id="email" name="email"
+            placeholder="techforb@tech.com" />
+        <div class="errorMsg isTop" *ngIf="
+          formRegister.get('email')?.invalid &&
+          (formRegister.get('email')?.touched || formRegister.get('email')?.dirty)
+        ">
+            <div *ngIf="formRegister.get('email')?.errors?.['required']">
+                Campo Obligatorio
+            </div>
+            <div *ngIf="formRegister.get('email')?.errors?.['pattern']">
+                Correo Invalido
+            </div>
+        </div>
+
+        <div class="contrasenia">
+            <input formControlName="password" type="password" placeholder="Contraseña" />
+            <div class="row errorColor" *ngIf="
+            formRegister.get('password')?.invalid &&
+            (formRegister.get('password')?.touched ||
+            formRegister.get('password')?.dirty)
+          ">
+                <div class="errorMsg" *ngIf="formRegister.get('password')?.errors?.['required']">
+                    Campo Obligatorio
+                </div>
+            </div>
+        </div>
+        <div class="contrasenia">
+            <input formControlName="passwordRepeat" type="password" placeholder="Repetir contraseña" />
+            <div class="row errorColor" *ngIf="
+            formRegister.get('passwordRepeat')?.invalid &&
+            (formRegister.get('passwordRepeat')?.touched ||
+            formRegister.get('passwordRepeat')?.dirty)
+          ">
+                <div class="errorMsg" *ngIf="formRegister.get('passwordRepeat')?.errors?.['required']">
+                    Campo Obligatorio
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="buttons-register">
+        <a class="olvido">¿Olvidaste tu contraseña?</a>
+        <input class="buttons" type="submit" class="submit" id="submit" value="Registrarse" />
+    </div>
+</form>

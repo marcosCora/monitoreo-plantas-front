@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private serviceUser: UserService, private router: Router) { }
   formLogin !: FormGroup;
+  viewFormLogin : boolean = true;
 
 
   ngOnInit(): void {
@@ -53,6 +54,14 @@ export class LoginComponent implements OnInit {
           }
           
         });
+    }
+  }
+
+  updateStateView(){
+    if(this.viewFormLogin){
+      this.viewFormLogin = false;
+    }else{
+      this.viewFormLogin = true;
     }
   }
 

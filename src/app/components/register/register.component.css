@@ -1,0 +1,118 @@
+
+  
+.container-right {
+    width: calc(50% + 12.5px); /* Adjusted to account for the overlap */
+    height: 100vh;
+    border: 1px solid #dcdbdd;
+    border-bottom-left-radius: 3%;
+    border-top-left-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -25px; /* Negative margin to overlap the left container */
+    z-index: 5;
+    background: #ffffff;
+  }
+  
+  .article-titles h2 {
+    width: 368px;
+    height: 55px;
+    top: 260px;
+    left: 907px;
+    font-size: 36.48px;
+    font-weight: 600;
+    line-height: 54.71px;
+    text-align: left;
+    color: #202020;
+  }
+  
+  .article-titles p {
+    width: 165px;
+    height: 48px;
+    top: 315px;
+    left: 907px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: left;
+    color: #202020;
+  }
+.form {
+    width: 393px;
+    left: 907px;
+  }
+
+  .div-continer-form {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 95px;
+    gap: 5px;
+    justify-content: space-between;
+    max-height: 95px;
+  }
+  
+  .div-continer-form input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #dcdbdd;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .div-continer-form label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #333;
+  }
+
+  .errorMsg {
+    position: relative;
+    color: red;
+    left: 12px;
+    font-size: 12px;
+  }
+  
+  .errorMsg.isTop {
+    bottom: 3px;
+  }
+
+  .buttons-register {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+    top: 108px;
+    width: 416px;
+    input {
+      cursor: pointer;
+    }
+  }
+  
+  .submit {
+    width: 164px;
+    height: 48px;
+    top: 539px;
+    left: 1136px;
+    background-color: #33a3aa;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #ffffff;
+    border: 1px 0px 0px 0px;
+    border-radius: 10px;
+  
+    color: #ffffff;
+    border: 1px solid #dcdbdd;
+  }
+  
+  .submit :hover {
+    background-color: #1fc0cb;
+  }

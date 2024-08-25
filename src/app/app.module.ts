@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModifyPlantComponent } from './components/modify-plant/modify-plant.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ModifyPlantComponent } from './components/modify-plant/modify-plant.com
     IndicatorsComponent,
     HeaderComponent,
     CreatePlantComponent,
-    ModifyPlantComponent
+    ModifyPlantComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

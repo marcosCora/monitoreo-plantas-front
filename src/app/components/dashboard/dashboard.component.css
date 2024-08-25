@@ -2,13 +2,29 @@
     background: #E9F1F4;
 }
 
+.app-header-container {
+    width: 95%;
+}
+
+.app-readings-container {
+    width: 95%;
+}
+
+.app-board-container {
+    width: 100%;
+}
+
+.app-indicators-container {
+    width: 94%;
+}
+
 .dashboard{
     height: 100vh;
     display: flex;
     flex-direction: row;
     top: -450px;
     left: 820px;
-    
+    width: 100%;
     font-family: "Poppins", sans-serif;
 }
 
@@ -18,4 +34,5 @@
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
+    width: 100%;
 }
