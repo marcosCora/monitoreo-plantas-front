@@ -5,124 +5,132 @@
     flex-direction: row;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
-
-.container-left {
-    background-image: linear-gradient(to bottom, #33A3AA 100%, #107076 100%), url(../../../assets/icons/fondo-login.png);
+  }
+  
+  .container-left {
+    background: linear-gradient(180deg, #33a3aa 0%, #107076 100%);
+    background-image: linear-gradient(180deg, #33a3aa 0%, #107076 100%),
+      url(../../../assets/icons/fondo-login.png);
+    background-repeat: no-repeat;
+    background-position: center right;
     background-blend-mode: multiply;
     background-size: cover;
-    background-position: center;
-    width: 796px;
+    width: calc(54% + 12.5px);
     height: 100vh;
     opacity: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.title {
+  }
+  
+  .errorMsg {
+    position: relative;
+    color: red;
+    left: 12px;
+    font-size: 12px;
+  }
+  
+  .errorMsg.isTop {
+    bottom: 3px;
+  }
+  
+  .title {
     width: 361px;
     height: 58px;
     top: 319px;
     left: 128px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 600;
     font-size: 48px;
-    line-height: 58px;
-}
-
-.p-information {
+    line-height: 160px;
+  }
+  
+  .p-information {
     width: 360px;
     height: 72px;
     top: 387px;
     left: 128px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-}
-
-.article-information {
+  }
+  
+  .article-information {
     padding-left: 5vh;
-    color: #FFFFFF;
-    display:flex;
-    justify-content: space-between;
-    align-items: center; 
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
     padding-top: 2vh;
     margin-bottom: 2vh;
     white-space: nowrap;
     width: 411px;
     height: 41px;
-/*     top: 479px;
-    left: 128px; */
-
-}
-
-
-.article-information .icon.shape {
+  }
+  
+  .article-information .icon.shape {
     width: 24px;
     height: 24px;
-}
-
-.article-information .icon.icon {
+  }
+  
+  .article-information .icon.icon {
     width: 20px;
     height: 20px;
-}
-
-
-.article-information .container-titulos .title-monitoreo {
+  }
+  
+  .container-logo {
+    height: 100%;
+  }
+  
+  .article-information .container-titulos .title-monitoreo {
     width: 130px;
-    height: 21px;
     font-size: 14px;
     font-weight: 500;
-    line-height: 21px;
-    text-align: left;
-}
-
-.article-information .container-titulos .info-monitoreo {
+  }
+  
+  .article-information .container-titulos .info-monitoreo {
     width: 375px;
     height: 17px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 1px;
     text-align: left;
-
-}
-
-.article-information .container-titulos .title-notifiacion{
+  }
+  
+  .article-information .container-titulos .title-notifiacion {
     width: 207px;
-    height: 21px;
     font-size: 14px;
     font-weight: 500;
-    line-height: 21px;
-    text-align: left;
-
-}
-
-.article-information .container-titulos .info-notificacion {
-    width: 346px;
+  }
+  
+  .article-information .container-titulos .info-notificacion {
+    width: 375px;
     height: 17px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 17px;
+    line-height: 1px;
     text-align: left;
-
-}
-
-.container-right{
-    width: 675px;
+  }
+  
+  .container-right {
+    width: calc(50% + 12.5px); /* Adjusted to account for the overlap */
     height: 100vh;
-    left: 765px;
-    border: 1px solid #DCDBDD;
-    border-radius: 1%;
+    border: 1px solid #dcdbdd;
+    border-bottom-left-radius: 3%;
+    border-top-left-radius: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.article-titles h2{
+    margin-left: -25px; /* Negative margin to overlap the left container */
+    z-index: 5;
+    background: #ffffff;
+  }
+  
+  .article-titles h2 {
     width: 368px;
     height: 55px;
     top: 260px;
@@ -132,9 +140,9 @@
     line-height: 54.71px;
     text-align: left;
     color: #202020;
-}
-
-.article-titles p{
+  }
+  
+  .article-titles p {
     width: 165px;
     height: 48px;
     top: 315px;
@@ -143,32 +151,34 @@
     font-weight: 500;
     line-height: 48px;
     text-align: left;
-    color:#202020;
-}
-
-
-.form{
+    color: #202020;
+  }
+  
+  .form {
     width: 393px;
     left: 907px;
-}
-
-.div-continer-form{
+  }
+  
+  .div-continer-form {
     position: relative;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-}
-
-.div-continer-form input{
+    height: 95px;
+    gap: 5px;
+    justify-content: space-between;
+    max-height: 95px;
+  }
+  
+  .div-continer-form input {
     width: 100%;
     padding: 10px;
-    border: 2px solid #DCDBDD;
+    border: 2px solid #dcdbdd;
     border-radius: 8px;
     outline: none;
-}
-
-.div-continer-form label{
+  }
+  
+  .div-continer-form label {
     position: absolute;
     top: -8px;
     left: 10px;
@@ -176,55 +186,59 @@
     padding: 0 5px;
     font-size: 12px;
     color: #333;
-}
-
-.buttons-password{
+  }
+  
+  .buttons-password {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1%;
-}
-
-.submit{
+    width: 416px;
+    input {
+      cursor: pointer;
+    }
+  }
+  
+  .submit {
     width: 164px;
     height: 48px;
     top: 539px;
     left: 1136px;
-    background-color: #33A3AA;
+    background-color: #33a3aa;
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #ffffff;
     border: 1px 0px 0px 0px;
     border-radius: 10px;
-
-    color: #FFFFFF;
-    border: 1px solid #DCDBDD
-}
-
-.submit :hover{
+  
+    color: #ffffff;
+    border: 1px solid #dcdbdd;
+  }
+  
+  .submit :hover {
     background-color: #1fc0cb;
-}
-
-.politica{
+  }
+  
+  .politica {
     width: 385px;
-height: 34px;
-top: 607px;
-left: 908px;
-font-size: 12px;
-font-weight: 400;
-line-height: 17px;
-text-align: left;
-}
-
-.strong{
-font-size: 12px;
-font-weight: 400;
-line-height: 17px;
-text-align: left;
-color: #33A3AA;
-}
-
-a{
+    height: 34px;
+    top: 607px;
+    left: 908px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+  }
+  
+  .strong {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    color: #33a3aa;
+  }
+  
+  a {
     cursor: pointer;
-}
+  }

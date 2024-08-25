@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
 import { Plant } from '../entity/plant';
 import { PlantBoard } from '../entity/plant-board';
@@ -14,26 +14,41 @@ export class PlantService {
   constructor(private http : HttpClient) { }
   url : string = 'http://localhost:8080/techapi/plants'
 
+
+
   getPlantsBoard() : Observable<PlantBoard[]>{
-    return this.http.get<PlantBoard[]>(`${this.url}/getalldto`);
+    let headers = this.configHeaders();
+    return this.http.get<PlantBoard[]>(`${this.url}/getalldto`, {headers});
   }
 
   getCountReadings() : Observable<CountReadings>{
-    return this.http.get<CountReadings>(`${this.url}/count-readings`);
+    let headers = this.configHeaders();
+    return this.http.get<CountReadings>(`${this.url}/count-readings`, {headers});
   }
 
 
-  postPlant(p : PlantBoard) : Observable<PlantBoard>{
-    return this.http.post<PlantBoard>(`${this.url}/creat-dto`, p);
+  postPlant(p : PlantBoard) : Observable<String>{
+    let headers = this.configHeaders();
+    return this.http.post<String>(`${this.url}/creat-dto`, p, { headers });
   }
 
-  putPlant(plant : PlantBoard) : Observable<PlantBoard>{    
-    return this.http.put<PlantBoard>(`${this.url}/update-plant`, plant);
+  putPlant(plant : PlantBoard) : Observable<string>{  
+    let headers = this.configHeaders();  
+    return this.http.put<string>(`${this.url}/update-plant`, plant, { headers }
+    );
   }
 
   deletePlant(id : number) : Observable<string>{
-    return this.http.delete<string>(`${this.url}/delete/${id}`);
-    }
+    let headers = this.configHeaders();
+    return this.http.delete<string>(`${this.url}/delete/${id}`, {headers});
+  }
+
+  configHeaders(): HttpHeaders{
+    return new HttpHeaders({
+      'Authorization' : `Bearer ${localStorage.getItem('jwt')}`
+    });
+  }
+
 
 
 }
