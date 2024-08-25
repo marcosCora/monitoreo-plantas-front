@@ -20,6 +20,7 @@ export class ModifyPlantComponent implements OnInit{
   @Input() plantModify !: PlantBoard;
   formModify !: FormGroup;
   countries : Country[] = [];
+  flagSumReadings : boolean = false;
 
   ngOnInit(): void {
     this.serviceCountries.getCountrys().subscribe((response) =>{
@@ -69,8 +70,8 @@ export class ModifyPlantComponent implements OnInit{
               this.cancelModify();
             }
           );
-          
-
+        }else{
+          this.flagSumReadings = true;
         }
 
     }

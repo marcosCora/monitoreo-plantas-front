@@ -31,6 +31,17 @@ export class BoardComponent implements OnInit{
     )
   }
 
+  deletePlant(){
+    this.servicePlant.deletePlant(this.plantSelected.idPlant).subscribe((response)=>{
+      console.log("Planta eliminada", this.plantBoard);
+      
+    }, 
+    (error) =>{
+      console.log(error);
+    }
+    );
+  }
+
   createPlantState(state : boolean){
     this.createPlant = state;
   }
