@@ -44,6 +44,8 @@ export class BoardComponent implements OnInit{
 
   createPlantState(state : boolean){
     this.createPlant = state;
+    console.log(this.createPlant);
+    
   }
 
   optionsPlant(plant : PlantBoard){

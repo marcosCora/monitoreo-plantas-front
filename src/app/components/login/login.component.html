@@ -31,20 +31,31 @@
             <h2>Portal de Monitoreo</h2>
             <p>Iniciar Sesiòn</p>
         </article>
-        <form class="form">
+        <form class="form" [formGroup]="formLogin" (submit)="login()">
             <div class="div-continer-form">
                 <label for="email">Email</label>
-                <input type="email" class="email" id="email" name="email" placeholder="techforb@tech.com"/>
-
+                <input formControlName="email" type="email" class="email" id="email" name="email" placeholder="techforb@tech.com"/>
+                <div class="" *ngIf="formLogin.get('email')?.invalid && (formLogin.get('email')?.touched || formLogin.get('email')?.dirty)">
+                    <div *ngIf="formLogin.get('email')?.errors?.['required']">
+                        Campo Obligatorio
+                    </div>
+                    <div *ngIf="formLogin.get('email')?.errors?.['pattern']">
+                        Correo Invalido
+                    </div>
+                </div>
                 <div class="contrasenia">
-                    <input type="password" placeholder="Ingresa tu contraseña" />
+                    <input formControlName="password" type="password" placeholder="Ingresa tu contraseña" />
+                    <div class="row errorColor" *ngIf="formLogin.get('password')?.invalid && (formLogin.get('password')?.touched || formLogin.get('password')?.dirty)">
+                        <div *ngIf="formLogin.get('password')?.errors?.['required']">
+                            Campo Obligatorio
+                        </div>
+                    </div>
                 </div>
 
-                <!-- <p>{{mensaje}}</p> -->
             </div>
             <div class="buttons-password">
                 <a class="olvido">¿Olvidaste tu contraseña?</a>
-                <input [routerLink]="['/dashboard']" type="submit" class="submit" id="submit" value="Iniciar sesión" />
+                <input type="submit" class="submit" id="submit" value="Iniciar sesión" />
             </div>
         </form>
 

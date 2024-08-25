@@ -24,7 +24,7 @@ export class PlantService {
 
 
   postPlant(p : PlantBoard) : Observable<PlantBoard>{
-    return this.http.post<PlantBoard>(`${this.url}/creat`, p);
+    return this.http.post<PlantBoard>(`${this.url}/creat-dto`, p);
   }
 
   putPlant(plant : PlantBoard) : Observable<PlantBoard>{    
