@@ -51,8 +51,7 @@
 
         <div class="contrasenia">
             <input formControlName="password" type="password" placeholder="Contraseña" />
-            <div class="row errorColor" *ngIf="
-            formRegister.get('password')?.invalid &&
+            <div class="row errorColor" *ngIf="formRegister.get('password')?.invalid &&
             (formRegister.get('password')?.touched ||
             formRegister.get('password')?.dirty)
           ">
@@ -70,6 +69,9 @@
           ">
                 <div class="errorMsg" *ngIf="formRegister.get('passwordRepeat')?.errors?.['required']">
                     Campo Obligatorio
+                </div>
+                <div class="errorMsg" *ngIf="formRegister.hasError('mismatch') && (formRegister.get('passwordRepeat')?.dirty || formRegister.get('passwordRepeat')?.touched)">
+                    No coinciden las contraseñas
                 </div>
             </div>
         </div>

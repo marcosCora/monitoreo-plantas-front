@@ -6,6 +6,7 @@ import { CreatePlantComponent } from './components/create-plant/create-plant.com
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'create-plant', component: CreatePlantComponent},
 ];

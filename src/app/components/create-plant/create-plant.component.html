@@ -10,8 +10,8 @@
             <input formControlName="name" type="text" class="" id="" name="email" placeholder="Techborb"/>
 
             <div class="pais">
-                <label for="">Pais</label>
-                <select name="" id="" formControlName="indexCountry">
+                <label class="select-label">Pais</label>
+                <select class="select-input" formControlName="indexCountry">
                     <option *ngFor="let c of countries; let i = index" [value]="i">{{c.name}}</option>
                 </select>
             </div>

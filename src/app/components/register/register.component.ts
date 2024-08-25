@@ -3,6 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CustomValidator } from '../customValidator';
 import { UserLogin } from 'src/app/interfaces/user-login';
 import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/entity/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +13,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private service : UserService){}
+  constructor(private service : UserService, private router : Router){}
 
   formRegister !: FormGroup;
 
@@ -30,28 +32,40 @@ export class RegisterComponent implements OnInit {
         updateOn: 'blur'
       }),
       'password': new FormControl('', {
-        validators: [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\[\]{};:'",.<>?]).*$/)],
+        validators: [Validators.required, Validators.minLength(8)],
         updateOn: 'blur'
       }),
-      'repeatPassword': new FormControl('', {
+      'passwordRepeat': new FormControl('', {
         validators: [Validators.required],
         updateOn: 'blur'
       })
 
     }, {
-      validators: CustomValidator.matchPasswords('password', 'repeatPassword')
+      validators: CustomValidator.matchPasswords('password', 'passwordRepeat')
   })
   }
 
   register(){
+    console.log(this.formRegister);
+    
     if(!this.formRegister.invalid){
-      console.log(this.formRegister);
+      let user : User = new User();
+      user.name = this.formRegister.controls['name'].value;
+      user.lastName = this.formRegister.controls['lastName'].value;
+      user.email = this.formRegister.controls['email'].value;
+      user.password = this.formRegister.controls['password'].value;
+      console.log(user);
       
-
-
+      this.service.posRegister(user).subscribe((response)=>{
+        console.log(response);
+        window.location.reload();
+      },     
+      (error)=>{
+        //alert("Error en el servidor");
+        this.router.navigate(['/login']);
+        console.log(error);
+      })
     }
-
-
   }
 
 }
