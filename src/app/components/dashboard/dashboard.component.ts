@@ -8,6 +8,9 @@ import { Route } from '@angular/router';
 })
 export class DashboardComponent {
 
-  constructor(){}
+  constructor(){
+    console.log('holaa', localStorage.getItem('jwt'));
+    
+  }
 
 }

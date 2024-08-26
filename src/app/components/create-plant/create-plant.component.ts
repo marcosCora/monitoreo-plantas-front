@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Country } from 'src/app/entity/country';
@@ -16,7 +16,8 @@ export class CreatePlantComponent implements OnInit{
 
   constructor(private serviceCountries : CountrysService, 
               private servicePlant : PlantService,
-              private router : Router){}
+              private router : Router,
+              private changeDetector : ChangeDetectorRef){}
 
   @Input() cratePlantState: boolean = true;
   @Output() event = new EventEmitter<boolean>();
@@ -51,8 +52,10 @@ export class CreatePlantComponent implements OnInit{
       console.log(plant);
       
       this.servicePlant.postPlant(plant).subscribe((response)=>{
+        this.event.emit(false);
+        this.changeDetector.detectChanges();
         console.log(response);
-        this.cancelCreatePlant();
+        
         this.router.navigate(['/dashboard']);
         
       },

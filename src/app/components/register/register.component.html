@@ -5,7 +5,7 @@
     </article>
 <form class="form" [formGroup]="formRegister" (submit)="register()">
     <div class="div-continer-form">
-        <input formControlName="name" type="text" class="email" id="email" name="email" placeholder="Nombre" />
+        <input formControlName="name" type="text" class="email" placeholder="Nombre" />
         
         <div class="errorMsg isTop" *ngIf="
             formRegister.get('name')?.invalid &&
@@ -20,7 +20,7 @@
         </div>
 
         
-        <input formControlName="lastName" type="text" class="email" id="email" name="email" placeholder="Apellido" />
+        <input formControlName="lastName" type="text" class="email" placeholder="Apellido" />
         <div class="errorMsg isTop" *ngIf="
           formRegister.get('lastName')?.invalid &&
           (formRegister.get('emalastNameil')?.touched || formRegister.get('lastName')?.dirty)
@@ -35,8 +35,7 @@
 
 
         
-        <input formControlName="email" type="email" class="email" id="email" name="email"
-            placeholder="techforb@tech.com" />
+        <input formControlName="email" type="email" class="email" placeholder="techforb@tech.com" />
         <div class="errorMsg isTop" *ngIf="
           formRegister.get('email')?.invalid &&
           (formRegister.get('email')?.touched || formRegister.get('email')?.dirty)

@@ -46,22 +46,18 @@ export class RegisterComponent implements OnInit {
   }
 
   register(){
-    console.log(this.formRegister);
-    
     if(!this.formRegister.invalid){
       let user : User = new User();
       user.name = this.formRegister.controls['name'].value;
       user.lastName = this.formRegister.controls['lastName'].value;
       user.email = this.formRegister.controls['email'].value;
       user.password = this.formRegister.controls['password'].value;
-      console.log(user);
       
-      this.service.posRegister(user).subscribe((response)=>{
+      this.service.postRegister(user).subscribe((response)=>{
         console.log(response);
         window.location.reload();
       },     
       (error)=>{
-        //alert("Error en el servidor");
         this.router.navigate(['/login']);
         console.log(error);
       })
