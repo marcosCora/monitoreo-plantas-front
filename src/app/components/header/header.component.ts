@@ -15,24 +15,14 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     let email = localStorage.getItem("emailUser") as string;
-    console.log(email);
-    
     let user : UserLogin = {
       email : email,
       password : ''
     }
-    console.log(user);
-    
     this.serviceUser.getName(user).subscribe((response)=>{
-      console.log(response);
-      this.nameUser = response as string;
-      //this.nameUser = response;
+      this.nameUser = response.message;
     }, (error)=>{
       console.log(error);
-      
     })
-    
-    
   }
-
 }

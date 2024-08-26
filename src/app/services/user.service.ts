@@ -20,16 +20,14 @@ export class UserService {
   }
 
   //register
-  posRegister(user : User): Observable<String>{
-
+  postRegister(user : User): Observable<String>{
     return this.http.post<string>(`${this.url}/register`, user);
   }
 
   //getName
-  getName(user : UserLogin) : Observable<String>{
+  getName(user : UserLogin) : Observable<any>{
     let headers = this.configHeaders();
-   
-    return this.http.post<string>(`${this.url}/get-name`, user, {headers});
+    return this.http.post<any>(`${this.url}/get-name`, user, {headers});
   }
 
   configHeaders(): HttpHeaders{

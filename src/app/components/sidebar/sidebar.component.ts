@@ -9,4 +9,10 @@ import { Router } from '@angular/router';
 export class SidebarComponent {
   constructor(private router : Router){}
 
+  logOut(){
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('emailUser');
+    this.router.navigate(['/login']);
+  }
+
 }

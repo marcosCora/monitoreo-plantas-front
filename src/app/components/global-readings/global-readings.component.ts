@@ -11,19 +11,19 @@ import { PlantService } from 'src/app/services/plant.service';
 export class GlobalReadingsComponent implements OnInit{
 
   constructor(private servicePlant : PlantService){}
-  countReading !: CountReadings;
+  countReading : CountReadings = {
+    readingsTotals : 0,
+    alertsOk : 0,
+    alertsRed : 0,
+    sensorsDisiabled : 0,
+    alertsMedias : 0
+  };
 
   ngOnInit(): void {
     this.servicePlant.getCountReadings().subscribe((response)=>{
       this.countReading = response;
-      console.log(response);
-      
     }, (error)=>{
       console.log("Error", error);
     })
-
-
-    
   }
-
 }
