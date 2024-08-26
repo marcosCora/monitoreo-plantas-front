@@ -38,11 +38,10 @@ export class LoginComponent implements OnInit {
         email: this.formLogin.controls['email'].value,
         password: this.formLogin.controls['password'].value
       }
-      this.serviceUser.postLogin(userLogin).pipe(
-        map((data: any) => data.token)
-      ).subscribe((token) => {
+      this.serviceUser.postLogin(userLogin).subscribe((token) => {
         console.log(token);
-        localStorage.setItem("jwt", token);
+        localStorage.setItem("jwt", token.token);
+        localStorage.setItem("emailUser", token.email)
         this.router.navigate(['/dashboard']);
       },
         (error : HttpErrorResponse) => {
