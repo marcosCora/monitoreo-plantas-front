@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit{
       password : ''
     }
     console.log(user);
-    
+    //falta hacer andar esto
     this.serviceUser.getName(user).subscribe((response)=>{
       console.log(response);
       this.nameUser = response as string;
