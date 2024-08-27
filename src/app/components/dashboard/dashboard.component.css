@@ -19,7 +19,7 @@
 }
 
 .dashboard{
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: row;
     top: -450px;
