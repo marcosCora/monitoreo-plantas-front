@@ -52,19 +52,15 @@ export class CreatePlantComponent implements OnInit{
       console.log(plant);
       
       this.servicePlant.postPlant(plant).subscribe((response)=>{
-        this.event.emit(false);
+     
         this.changeDetector.detectChanges();
         console.log(response);
-        
-        this.router.navigate(['/dashboard']);
         
       },
       (error)=>{
       console.log(error);
-      
     })
-      
-      
+    this.cancelCreatePlant();
     }
   }
 
