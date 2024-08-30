@@ -27,9 +27,9 @@ export class PlantService {
   }
 
 
-  postPlant(p : PlantBoard) : Observable<String>{
+  postPlant(p : PlantBoard) : Observable<any>{
     let headers = this.configHeaders();
-    return this.http.post<String>(`${this.url}/creat-dto`, p, { headers });
+    return this.http.post<any>(`${this.url}/creat-dto`, p, { headers });
   }
 
   putPlant(plant : PlantBoard) : Observable<string>{  

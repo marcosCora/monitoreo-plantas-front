@@ -21,13 +21,7 @@ export class authCreatorGuard {
     if(token == null){
       this.router.navigate(['/login']);
     }
-    this.plantService.getPlantsBoard().subscribe((response)=>{
-    }, 
-    (error) =>{
-      this.router.navigate(['/login']);
-      console.log(error);
-    })
-  
+
     return true;
   }
 }
